@@ -12,7 +12,12 @@ export default function Dropdown({ children }: DropdownProps) {
   const details = useRef(null)
   useEffect(function () {
     function onClick(e) {
-      if (details.current !== null && e.target.closest('summary') === null) {
+      const closestSummary = e.target.closest('summary')
+      if (
+        details.current !== null &&
+        (closestSummary === null ||
+          closestSummary.parentElement !== details.current)
+      ) {
         details.current.open = false
       }
     }
@@ -41,7 +46,7 @@ export function DropdownButton({
     )
   }
   return (
-    <summary className="cc-button">
+    <summary className="cc-button cc-dropdown__summary">
       {icon && <Icon>{icon}</Icon>}
       {children}
       <Icon style={{ fontSize: 12, color: 'rgb(50, 49, 48)' }}>
