@@ -1,0 +1,44 @@
+.cc-button {
+  border: none;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  height: 44px;
+  min-width: 40px;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 2px;
+  flex-wrap: nowrap;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: space-between;
+  font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI',
+    -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.cc-button:hover,
+.cc-dropdown[open] > .cc-button,
+.cc-button:hover {
+  background-color: rgb(243, 242, 241);
+  color: rgb(32, 31, 30);
+}
+
+.cc-button > .ms-Icon {
+  color: rgb(0, 120, 212);
+  font-size: 16px;
+  width: 16px;
+  padding: 0px 7px;
+}
+
+.cc-button--overflow {
+  justify-content: center;
+}
+
+.cc-button--overflow .ms-Icon {
+  color: rgb(96, 94, 92);
+  font-size: 17px;
+}
+.cc-button--icon-only {
+  justify-content: center;
+}

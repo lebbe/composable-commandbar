@@ -1,0 +1,13 @@
+.cc-dropdown {
+  position: relative;
+}
+
+.cc-dropdown__summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+details > .cc-dropdown__summary::-webkit-details-marker {
+  display: none;
+}

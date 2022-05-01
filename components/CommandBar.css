@@ -1,0 +1,13 @@
+.cc-commandBar {
+  display: flex;
+  padding: 0px 14px 0px 24px;
+}
+
+.cc-commandBar--items {
+  display: flex;
+  flex-grow: 1;
+}
+
+.cc-commandBar--far-items {
+  display: flex;
+}

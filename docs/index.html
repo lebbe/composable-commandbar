@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+    <title>Command bar example</title>
+    <link rel="stylesheet"
+      href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+  <script type="module" crossorigin src="/composable-commandbar/assets/index.83b101e6.js"></script>
+  <link rel="stylesheet" href="/composable-commandbar/assets/index.09d11161.css">
+</head>
+
+<body>
+  <section style="max-width: 824px;">
+    <div id="fluent"></div>
+    <div id="composable"></div>
+    <article>
+      <h1>Composable CommandBar</h1>
+
+      <p>Can you spot the difference?</p>
+
+      <p>I like components that are composable. That simply means, that you can put some components inside other
+        components to build a GUI. The worst example I have found of components that are not composable, are the <a
+          href="https://developer.microsoft.com/en-us/fluentui#/controls/web/commandbar">Fluent
+          UI CommandBar</a>.</p>
+
+      <p>To build a simple Command Bar, it uses a single component CommandBar, and <strong>136 lines</strong> of javascript code,
+        with
+        objects and arrays, describing the command bar.</p>
+
+      <p>This has multiple downsides:
+
+      <ul>
+        <li>You cannot use components from other libraries within the CommandBar.
+        </li>
+        <li>You cannot add features to the CommandBar that is not already supported in Fluent UI.
+        </li>
+        <li>  The code is unnecesary complex and hard to read.
+        </li>
+      </ul>
+      </p>
+      <p>
+        To combat this, I mad this simple repo as an example on how to do something identical, but by composing it with
+        components instead. You can see the differences in plain sight, by comparing the files
+        <a
+          href="https://github.com/lebbe/composable-commandbar/blob/master/FluentCommandBar.tsx">FluentCommandBar.tsx</a>
+        with <a
+          href="https://github.com/lebbe/composable-commandbar/blob/master/ComposableCommandBar.tsx">ComposableCommandBar.tsx</a>.
+      </p>
+
+    </article>
+  </section>
+  
+</body>
+
+</html>
