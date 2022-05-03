@@ -33,7 +33,7 @@ export default function Dropdown({ children }: DropdownProps) {
   )
 }
 
-export function DropdownButton({
+Dropdown.Button = function DropdownButton({
   children,
   overflow,
   icon,
@@ -54,4 +54,12 @@ export function DropdownButton({
       </Icon>
     </summary>
   )
+}
+
+type CalloutProps = {
+  children?: React.ReactNode
+}
+
+Dropdown.Drawer = function Drawer({ children }: CalloutProps) {
+  return <dialog className="cc-dropdown__drawer">{children}</dialog>
 }

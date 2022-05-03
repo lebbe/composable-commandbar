@@ -1,43 +1,41 @@
-import CommandBar, { CBFarItems, CBItems } from './components/CommandBar'
-import Icon from './components/Icon'
-import Dropdown, { DropdownButton } from './components/Dropdown'
-import { Callout } from './components/Callout'
+import CommandBar from './components/CommandBar'
+import Dropdown from './components/Dropdown'
 import Button from './components/Button'
 
 export function ComposableCommandBar() {
   return (
     <CommandBar>
-      <CBItems>
+      <CommandBar.Items>
         <Dropdown>
-          <DropdownButton icon="Add">New</DropdownButton>
-          <Callout>
+          <Dropdown.Button icon="Add">New</Dropdown.Button>
+          <Dropdown.Drawer>
             <Button icon="Mail">Email message</Button>
             <Button icon="Calendar">Calendar event</Button>
-          </Callout>
+          </Dropdown.Drawer>
         </Dropdown>
         <Dropdown>
-          <DropdownButton icon="Upload">Upload</DropdownButton>
-          <Callout>
+          <Dropdown.Button icon="Upload">Upload</Dropdown.Button>
+          <Dropdown.Drawer>
             <Button>File</Button>
             <Button>Folder</Button>
-          </Callout>
+          </Dropdown.Drawer>
         </Dropdown>
         <Button icon="Share">Share</Button>
         <Button icon="Download">Download</Button>
         <Dropdown>
-          <DropdownButton overflow />
-          <Callout>
+          <Dropdown.Button overflow />
+          <Dropdown.Drawer>
             <Button icon="MoveToFolder">Move to...</Button>
             <Button icon="Copy">Copy to...</Button>
             <Button icon="Edit">Rename</Button>
-          </Callout>
+          </Dropdown.Drawer>
         </Dropdown>
-      </CBItems>
+      </CommandBar.Items>
 
-      <CBFarItems>
+      <CommandBar.FarItems>
         <Button icon="Tiles" />
         <Button icon="Info" />
-      </CBFarItems>
+      </CommandBar.FarItems>
     </CommandBar>
   )
 }

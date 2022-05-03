@@ -11,3 +11,33 @@
 details > .cc-dropdown__summary::-webkit-details-marker {
   display: none;
 }
+
+.cc-dropdown__drawer {
+  font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI',
+    -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.133) 0px 3.2px 7.2px 0px,
+    rgba(0, 0, 0, 0.11) 0px 0.6px 1.8px 0px;
+  outline: transparent none medium;
+  border: none;
+  flex-direction: column;
+  padding: 0;
+  min-width: 140px;
+  /* Animate appeareance */
+  top: 25px;
+  opacity: 0;
+  transition: top 100ms, opacity 100ms;
+}
+
+.cc-dropdown__drawer > .cc-button {
+  justify-content: flex-start;
+}
+
+.cc-dropdown[open] .cc-dropdown__drawer {
+  top: 44px;
+  opacity: 1;
+}
