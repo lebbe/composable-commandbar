@@ -1,11 +1,11 @@
-import CommandBar from './components/CommandBar'
+import CommandBar from './components/CommandBar/CommandBar'
 import Dropdown from './components/Dropdown'
 import Button from './components/Button'
 
 export function ComposableCommandBar() {
   return (
-    <CommandBar>
-      <CommandBar.Items>
+    <CommandBar aria-label="Inbox actions">
+      <CommandBar.Items aria-label="Email actions">
         <Dropdown>
           <Dropdown.Button icon="Add">New</Dropdown.Button>
           <Dropdown.Drawer>
@@ -22,7 +22,7 @@ export function ComposableCommandBar() {
         </Dropdown>
         <Button icon="Share">Share</Button>
         <Button icon="Download">Download</Button>
-        <Dropdown>
+        <Dropdown aria-label="More commands">
           <Dropdown.Button overflow />
           <Dropdown.Drawer>
             <Button icon="MoveToFolder">Move to...</Button>
@@ -32,7 +32,7 @@ export function ComposableCommandBar() {
         </Dropdown>
       </CommandBar.Items>
 
-      <CommandBar.FarItems>
+      <CommandBar.FarItems aria-label="More actions">
         <Button icon="Tiles" />
         <Button icon="Info" />
       </CommandBar.FarItems>
