@@ -12,6 +12,7 @@
   <section style="max-width: 824px;">
     <div id="fluent"></div>
     <div id="composable"></div>
+    <div id="polymorf"></div>
     <article>
       <h1>Composable CommandBar</h1>
 
@@ -22,7 +23,8 @@
           href="https://developer.microsoft.com/en-us/fluentui#/controls/web/commandbar">Fluent
           UI CommandBar</a>.</p>
 
-      <p>To build a simple Command Bar, it uses a single component CommandBar, and <strong>136 lines</strong> of javascript code,
+      <p>To build a simple Command Bar, it uses a single component CommandBar, and <strong>136 lines</strong> of
+        javascript code,
         with
         objects and arrays, describing the command bar.</p>
 
@@ -33,7 +35,7 @@
         </li>
         <li>You cannot add features to the CommandBar that is not already supported in Fluent UI.
         </li>
-        <li>  The code is unnecesary complex and hard to read.
+        <li> The code is unnecesary complex and hard to read.
         </li>
       </ul>
       </p>
@@ -46,6 +48,12 @@
           href="https://github.com/lebbe/composable-commandbar/blob/master/ComposableCommandBar.tsx">ComposableCommandBar.tsx</a>.
       </p>
 
+      <h2>Polymorphy</h2>
+
+      <p>I also added a version where items are added to the overflow menu when screen size gets smaller. It is still
+        composable, with the same benefits as above, but where the items are composed of arrays of React Components,
+        instead of going via the children prop.
+      </p>
     </article>
   </section>
   <script type="module" src="/index.tsx"></script>

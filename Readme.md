@@ -15,3 +15,8 @@ This has multiple downsides:
 - The code is unnecesary complex and hard to read.
 
 To combat this, I mad this simple repo as an example on how to do something identical, but by composing it with components instead. You can see the differences in plain sight, by comparing the files [FluentCommandBar.tsx](./FluentCommandBar.tsx) with [ComposableCommandBar.tsx](./ComposableCommandBar.tsx).
+
+## Polymorphy
+
+I also added a version where items are added to the overflow menu when screen size gets smaller. It is still composable, with the same
+benefits as above, but where the items are composed of arrays of React Components, instead of going via the children prop.
