@@ -2,13 +2,13 @@ import Icon from './Icon'
 
 type DropdownProps = {
   children?: React.ReactNode
-}
+} & React.AllHTMLAttributes<HTMLDetailsElement>
 
 import './Dropdown.css'
 import { useEffect } from 'react'
 import { useRef } from 'react'
 
-export default function Dropdown({ children }: DropdownProps) {
+export default function Dropdown({ children, ...props }: DropdownProps) {
   const details = useRef(null)
   useEffect(function () {
     function onClick(e) {
@@ -27,7 +27,7 @@ export default function Dropdown({ children }: DropdownProps) {
     }
   }, [])
   return (
-    <details ref={details} className="cc-dropdown">
+    <details ref={details} className="cc-dropdown" {...props}>
       {children}
     </details>
   )
